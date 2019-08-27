@@ -39,5 +39,14 @@
             "kind": "[parameters('kind')]"
         }
     ],
-    "outputs": {}
+    "outputs": {
+  "storageAccountName": {
+    "type": "string",
+    "value": "[variables('storageAccountName')]"
+  },
+  "storageUri": {
+    "type": "string",
+    "value": "[reference(variables('storageAccountName')).primaryEndpoints.blob]"
+  }
+}
 }
